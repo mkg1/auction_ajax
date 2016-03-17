@@ -22,7 +22,8 @@
 
   <h3>Highest bid</h3>
   <div class="row collapse">
-    <%= render partial: 'items/highest', locals: {item: @item}%>
+    <div class="small-2 columns"><span class="prefix">$</span></div>
+    <div class="small-10 columns"><%= text_field_tag :nothing, @item.highest_bid_amount, disabled: true %></div>
   </div>
 
   <%= render partial: "bid" %>
