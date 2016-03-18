@@ -17,3 +17,16 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+//
+// function update()
+//   {
+//      $.get('/items/_bid.html.erb', { 'item_id': $("#bit_item_id") }, function(data)
+//           {
+//          $('#refreshable').html(data);i
+//      });
+//   }
+$(document).ready(function(){
+    setInterval(function() {
+    $("#refreshable").load(location.href + " #refreshable");
+  }, 5000);
+});
